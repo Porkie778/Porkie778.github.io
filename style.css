@@ -15,16 +15,6 @@ html {
 	scroll-snap-stop: always;
 }
 
-body {
-	scroll-behavior: smooth;
-}
-
-.cover {
-	width: 100%;
-	height: 100vh;
-	background-color: red;
-}
-
 .wrapper {
 	display: flex;
 	flex-direction: column;
@@ -33,8 +23,8 @@ body {
 	background-color: #603fef;
 }
 
-.cover {
-	background-image: url('images/pankaj-patel-6JVlSdgMacE-unsplash.jpg');
+#coverHero {
+	background-image: url('images/pankaj-patel-6JVlSdgMacE-unsplash.webp');
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -53,7 +43,7 @@ body {
 }
 
 /* What is CSS */
-section.topic-card:nth-child(2) {
+.topic-card:nth-child(2) {
 	color: #603fef;
 	background-color: #fff;
 }
