@@ -11,6 +11,7 @@ body::-webkit-scrollbar {
 	display: none;
 }
 html {
+	font-size: 62.5%;
 	scroll-snap-type: y mandatory;
 	scroll-snap-stop: always;
 }
@@ -23,7 +24,7 @@ html {
 	background-color: #603fef;
 }
 
-#coverHero {
+#cover {
 	background-image: url('images/pankaj-patel-6JVlSdgMacE-unsplash.webp');
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -42,11 +43,13 @@ html {
 	height: 100vh;
 }
 
-/* What is CSS */
+/* Card 1 - What is CSS */
 .topic-card:nth-child(2) {
 	color: #603fef;
 	background-color: #fff;
 }
+
+/* Card 2 - Grid Template */
 
 .topic-card:nth-child(3) {
 	background-image: url('images/stacked-waves-haikei.svg');
@@ -54,36 +57,77 @@ html {
 	background-size: cover;
 }
 
+.topic-card > .info > p {
+	display: flex;
+	justify-content: left;
+	color: rgb(0, 0, 0);
+	font-family: 'Open Sans', sans-serif;
+	font-size: clamp(2rem, 20%, 3rem);
+	width: 90%;
+	max-width: clamp(45ch, 20%, 75ch);
+}
+
 .info {
 	width: 100%;
 	display: flex;
 	justify-content: space-evenly;
+	text-align: left;
 	align-items: center;
+}
+.info > * {
+	width: 100%;
 }
 
 .wrapper h1 {
-	font-size: clamp(3rem, 10vw, 6rem);
+	font-size: clamp(7.2rem, 10vw, 15rem);
 	margin-bottom: 32px;
 }
 
-.info > * + :not(.info > .image) {
-	height: 100%;
-	padding: 16px;
+.topic-card h1 {
+	font-size: clamp(4rem, 10vw, 7rem);
 }
 
 .info > .image {
-	height: clamp(300px, 20vw, 600px);
-	width: clamp(300px, 20vw, 600px);
+	height: clamp(32rem, 30vw, 100rem);
+	width: clamp(32rem, 30vw, 100rem);
 	border: 8px #603fef solid;
 	border-radius: 8px;
 	object-fit: cover;
 	object-position: right;
 }
 
-.info > p {
-	color: rgb(0, 0, 0);
-	font-family: 'Open Sans', sans-serif;
-	width: clamp(60%, 50vw, 80%);
+.grid-container {
+	max-height: 100vh;
+	overflow-y: scroll;
+	width: 80%;
+	height: 50%;
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.grid-container::-webkit-scrollbar {
+	display: none;
+}
+
+.card {
+	font-size: 2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: clamp(50px, 10vw, 100px);
+	width: 100%;
+	overflow: hidden;
+	background-color: hsl(159, 50%, 50%, 70%);
+	transition: all 0.2s ease-in-out;
+	border-radius: 1rem;
+}
+
+.card:hover {
+	background-color: hsl(159, 75%, 50%, 70%);
+	box-shadow: 2px 3px 5px hsla(0, 0%, 0%, 0.623);
+	cursor: pointer;
 }
 
 @media screen and (max-width: 800px) {
