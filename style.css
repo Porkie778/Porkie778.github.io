@@ -1,27 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
 
+:root {
+	--main-color-h: 251;
+	--main-color-s: 85%;
+	--main-color-l: 59%;
+	--main-colour: hsl(var(--main-color-h), var(--main-color-s), var(--main-color-l));
+	--white: hsl(100, 100%, 100%);
+	--black: hsl(0, 0%, 0%);
+}
+
 * {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 }
 
-body::-webkit-scrollbar {
-	display: none;
-}
 html {
 	font-size: 62.5%;
 	scroll-snap-type: y mandatory;
 	scroll-snap-stop: always;
 }
 
+body::-webkit-scrollbar {
+	display: none;
+}
+
 .wrapper {
 	display: flex;
 	flex-direction: column;
-	color: #fff;
+	color: var(--white);
 	font-family: 'Lobster', cursive;
-	background-color: #603fef;
+	background-color: var(--main-colour);
 }
 
 #cover {
@@ -29,6 +39,11 @@ html {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
+}
+
+.wrapper h1 {
+	font-size: clamp(7.2rem, 10vw, 15rem);
+	margin-bottom: 32px;
 }
 
 /* Styling for Cards and Cover Image */
@@ -43,28 +58,14 @@ html {
 	height: 100vh;
 }
 
-/* Card 1 - What is CSS */
-.topic-card:nth-child(2) {
-	color: #603fef;
-	background-color: #fff;
+#card-1 {
+	color: var(--main-colour);
+	background-color: var(--white);
 }
-
-/* Card 2 - Grid Template */
-
-.topic-card:nth-child(3) {
+#card-3 {
 	background-image: url('images/stacked-waves-haikei.svg');
 	background-repeat: no-repeat;
 	background-size: cover;
-}
-
-.topic-card > .info > p {
-	display: flex;
-	justify-content: left;
-	color: rgb(0, 0, 0);
-	font-family: 'Open Sans', sans-serif;
-	font-size: clamp(2rem, 20%, 3rem);
-	width: 90%;
-	max-width: clamp(45ch, 20%, 75ch);
 }
 
 .info {
@@ -78,9 +79,13 @@ html {
 	width: 100%;
 }
 
-.wrapper h1 {
-	font-size: clamp(7.2rem, 10vw, 15rem);
-	margin-bottom: 32px;
+.info > p {
+	display: flex;
+	justify-content: left;
+	color: var(--black);
+	font-family: 'Open Sans', sans-serif;
+	font-size: clamp(2rem, 20%, 3rem);
+	max-width: clamp(45ch, 20%, 75ch);
 }
 
 .topic-card h1 {
@@ -90,44 +95,84 @@ html {
 .info > .image {
 	height: clamp(32rem, 30vw, 100rem);
 	width: clamp(32rem, 30vw, 100rem);
-	border: 8px #603fef solid;
+	border: 8px var(--main-colour) solid;
 	border-radius: 8px;
 	object-fit: cover;
 	object-position: right;
 }
 
 .grid-container {
-	max-height: 100vh;
-	overflow-y: scroll;
-	width: 80%;
-	height: 50%;
-	display: grid;
-	gap: 1rem;
-	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-}
-
-.grid-container::-webkit-scrollbar {
-	display: none;
-}
-
-.card {
-	font-size: 2rem;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	height: clamp(50px, 10vw, 100px);
 	width: 100%;
-	overflow: hidden;
-	background-color: hsl(159, 50%, 50%, 70%);
-	transition: all 0.2s ease-in-out;
-	border-radius: 1rem;
+	height: 80%;
+	display: grid;
+	font-size: 2rem;
+	grid-template-areas:
+		'topbar	topbar	topbar'
+		'ads	content	sidebar'
+		'footer	footer 	footer';
+	grid-template-columns: 0.5fr 3fr 0.5fr;
+	grid-template-rows: 50px auto 70px;
 }
 
-.card:hover {
-	background-color: hsl(159, 75%, 50%, 70%);
-	box-shadow: 2px 3px 5px hsla(0, 0%, 0%, 0.623);
-	cursor: pointer;
+.grid-container > * {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.grid-container > header {
+	background-color: var(--main-colour);
+	grid-area: topbar;
+}
+
+.grid-container > aside {
+	grid-area: ads;
+}
+
+.grid-container > article {
+	padding: 1rem;
+	font-family: 'Open Sans';
+	display: flex;
+	align-items: normal;
+	justify-content: left;
+	color: var(--black);
+	background-color: var(--white);
+	grid-area: content;
+}
+
+.grid-container > nav {
+	background-color: hsl(--main-color-h, --main-color-s, 20%);
+	display: flex;
+	height: 100%;
+	width: 100%;
+	list-style-type: none;
+	justify-content: left;
+	flex-direction: column;
+	align-items: center;
+	grid-area: sidebar;
+}
+
+nav > a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	width: 100%;
+	height: 10%;
+	font-size: 1.6rem;
+	text-decoration: none;
+	font-family: 'Open Sans';
+	color: white;
+	transition: all 0.1s ease-in-out;
+}
+
+nav > a:hover {
+	color: hsl(251, 85%, 59%);
+	background-color: white;
+}
+
+.grid-container > footer {
+	grid-area: footer;
 }
 
 @media screen and (max-width: 800px) {
