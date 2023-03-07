@@ -221,3 +221,21 @@ html {
 		display: none;
 	}
 }
+
+@media (pointer: coarse) {
+	#card-2 {
+		flex-direction: column;
+		padding-bottom: 20vh;
+		height: auto;
+	}
+	#card-2-heading {
+		padding-left: unset;
+		text-align: center;
+	}
+	#card-2 p {
+		text-align: justify;
+	}
+	#humaans-1 {
+		display: none;
+	}
+}
