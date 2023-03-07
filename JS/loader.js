@@ -6,3 +6,14 @@ window.addEventListener('load', () => {
 		document.body.removeChild('loader');
 	});
 });
+
+function openNav() {
+	document.getElementById('mobile-nav').style.width = '250px';
+	document.body.style.overflow = 'hidden';
+}
+
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+	document.getElementById('mobile-nav').style.width = '0';
+	document.body.style.overflow = 'scroll';
+}

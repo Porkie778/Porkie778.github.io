@@ -6,25 +6,51 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="shortcut icon" href="/images/BB.ico" type="image/x-icon" />
 		<link rel="stylesheet" href="/CSS/style.css" />
+		<script src="https://kit.fontawesome.com/c21b7427e3.js" crossorigin="anonymous"></script>
 		<title>Home | Benjamin Bruce</title>
 	</head>
 	<body>
-		<nav id="desktop-nav">
+		<nav id="mobile-nav" class="mobile-nav">
+			<a href="javascript:void()" class="closebtn" onclick="closeNav()">&times;</a>
 			<a href="#" class="nav-link">Home</a>
 			<a href="./pages/test/" class="nav-link">HTML</a>
 			<a href="#" class="nav-link">CSS</a>
 			<a href="#" class="nav-link">JavaScript</a>
 			<a href="#" class="nav-link">Test</a>
 		</nav>
-		<main class="wrapper">
+		<span id="openBtn" onclick="openNav()"><i class="fa-sharp fa-solid fa-bars"></i></span>
+		<nav class="desktop-nav">
+			<a href="#" class="nav-link">Home</a>
+			<a href="./pages/test/" class="nav-link">HTML</a>
+			<a href="#" class="nav-link">CSS</a>
+			<a href="#" class="nav-link">JavaScript</a>
+			<a href="#" class="nav-link">Test</a>
+		</nav>
+		<main id="main" class="wrapper">
 			<div class="page" id="card-1">
-				<img src="/images/BB.png" alt="Icon" id="logo-white" />
+				<img src="/images/logo-bb.svg" alt="Icon" id="logo-white" />
 				<img src="/images/florian-olivo-4hbJ-eymZ1o-unsplash.png" alt="Coding Screen" id="cover-image" />
 			</div>
 			<div class="page" id="card-2">
-				<h1 id="card-2-heading">Why learn to Code?</h1>
-				<p>More and more jobs</p>
-				<img src="/images/blue to Pink-wave.svg" alt="waves pink and blue" />
+				<div class="card-column">
+					<h1 id="card-2-heading">Why learn to Code?</h1>
+					<p>
+						Hey there! If you're thinking about whether or not to start coding, let me tell you, it's worth giving
+						it a shot. While technology might not be your cup of tea, coding offers a plethora of benefits that go
+						beyond just understanding tech. For starters, coding can improve your problem-solving skills and boost
+						your creativity. It can also help you gain a deeper understanding of how things work and develop a
+						logical thought process. Additionally, coding skills are highly sought after in many industries, so it
+						can be a valuable asset to have on your resume. And who knows, you might even discover a passion for
+						coding and tech along the way. So, give coding a chance and see where it takes you! <br /><br />
+						Programming is an industry that is constantly evolving, with new career paths appearing every day that
+						may suit you. It may seem daunting at first when you open an editor and freeze in front of all the
+						options in front of you, but remember that everyone starts somewhere. The best way to maintain
+						motivation in learing a programming language is think of something that you'd like to do, then learn how
+						to do it.
+					</p>
+					<img src="/images/blue to Pink-wave.svg" alt="waves pink and blue" />
+				</div>
+				<img id="humaans-1" src="/images/humaans.svg" alt="" />
 			</div>
 			<div class="loader"></div>
 			<script src="/JS/loader.js"></script>

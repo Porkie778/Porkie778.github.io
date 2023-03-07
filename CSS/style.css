@@ -22,20 +22,68 @@ html {
 	margin: 0;
 }
 
+.mobile-nav {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 3;
+	top: 0;
+	right: 0;
+	background-color: #111;
+	overflow-x: hidden;
+	padding-top: 60px;
+	transition: 0.5s;
+}
+
+.mobile-nav > a {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #818181;
+	display: block;
+	transition: 0.3s;
+}
+
+#openBtn {
+	cursor: pointer;
+	padding-right: 1.6rem;
+	padding-top: 1.6rem;
+	z-index: 2;
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: var(--white);
+}
+#openBtn > i {
+	text-shadow: 2px 3px 4px hsla(0, 0%, 0%, 0.416);
+	font-size: 3rem;
+	-webkit-text-stroke: 1px hsla(0, 0%, 0%, 0.17);
+}
+
+.mobile-nav .closebtn {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+}
+
 /* Desktop Navigation Bar */
-#desktop-nav {
+.desktop-nav {
+	display: none;
 	z-index: 1;
 	background: linear-gradient(180deg, hsl(0, 0%, 0%) 0%, hsla(0, 0%, 0%, 0) 100%);
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
-	position: fixed;
+	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
 }
 
-#desktop-nav > .nav-link {
+.desktop-nav > .nav-link {
+	display: none;
 	font-family: 'Roboto';
 	text-decoration: none;
 	font-size: 2rem;
@@ -58,9 +106,10 @@ html {
 }
 
 #card-1 > #logo-white {
+	filter: drop-shadow(2px 3px 4px var(--black));
 	z-index: 1;
-	height: 256px;
-	width: 256px;
+	height: clamp(128px, 40%, 256px);
+	width: clamp(128px, 40%, 256px);
 	color: var(--black);
 }
 
@@ -75,14 +124,13 @@ html {
 }
 
 #card-2 {
+	height: 150vh;
 	position: relative;
-	display: grid;
-	justify-items: start;
-	grid-template-rows: auto auto auto auto;
-	grid-template-columns: repeat(4, 1fr);
+	display: flex;
+	justify-items: left;
 }
 
-#card-2 > img {
+#card-2 > .card-column > img {
 	z-index: -1;
 	position: absolute;
 	bottom: 0;
@@ -91,20 +139,29 @@ html {
 	object-fit: cover;
 }
 
+#humaans-1 {
+	margin: 3rem;
+	width: 100%;
+	transform: scaleX(-1);
+	/* transform: perspective(); */
+	height: 50%;
+	position: relative;
+}
+
 #card-2-heading {
-	padding-left: 5rem;
-	padding-top: 5rem;
+	padding-left: 3rem;
+	padding-top: 2rem;
 	grid-column: 1/5;
 	width: 100%;
 	font-family: 'Roboto';
-	font-size: 6rem;
+	font-size: clamp(4rem, 10vw, 6rem);
 }
 
-#card-2 > p {
+#card-2 p {
+	max-width: 100%;
 	padding: 3rem;
-	grid-column: 1/6;
 	align-self: top;
-	font-size: 2rem;
+	font-size: 2.2rem;
 	font-family: 'Lora';
 }
 
@@ -143,5 +200,23 @@ html {
 	}
 	to {
 		transform: rotate(1turn);
+	}
+}
+
+@media screen and (width < 850px) {
+	#card-2 {
+		flex-direction: column;
+		padding-bottom: 20vh;
+		height: auto;
+	}
+	#card-2-heading {
+		padding-left: unset;
+		text-align: center;
+	}
+	#card-2 p {
+		text-align: justify;
+	}
+	#humaans-1 {
+		display: none;
 	}
 }
