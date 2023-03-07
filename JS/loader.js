@@ -7,6 +7,7 @@ window.addEventListener('load', () => {
 	});
 });
 
+// Open navigation menu sidebar
 function openNav() {
 	document.getElementById('mobile-nav').style.width = '250px';
 	document.body.style.overflow = 'hidden';
