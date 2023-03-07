@@ -4,69 +4,30 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="style.css" />
-		<script src="https://kit.fontawesome.com/c21b7427e3.js" crossorigin="anonymous"></script>
-		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-		<title>Lesson 2</title>
+		<link rel="shortcut icon" href="/images/BB.ico" type="image/x-icon" />
+		<link rel="stylesheet" href="/CSS/style.css" />
+		<title>Home | Benjamin Bruce</title>
 	</head>
 	<body>
-		<div class="wrapper">
-			<section id="cover">
-				<h1>CSS Tutorial</h1>
-				<!-- <img id="coverImage" src="images/pankaj-patel-6JVlSdgMacE-unsplash.jpg" alt="" /> -->
-			</section>
-			<section class="topic-card" id="card-1">
-				<div id="background-blur"></div>
-				<h1 data-aos="fade-up" data-aos-delay="50" data-aos-mirror="true" data-aos-easing="ease-in-out">
-					What is CSS?
-				</h1>
-				<div class="info">
-					<img class="image" src="images/jantine-doornbos-xt9tb6oa42o-unsplash.jpg" alt="CSS Laptop" />
-					<p>
-						&rarr;CSS (Cascading Style Sheets) is a language used to describe how a website should look and be
-						presented to its visitors. It works with HTML, which is the language used to create the structure and
-						content of a website.
-						<br /><br />
-
-						&rarr;CSS allows web designers to control the visual aspects of a website, such as the color, font,
-						size, and layout of text, images, and other elements. It separates the presentation of a website from
-						its content, which makes it easier to make changes to the design without affecting the underlying
-						structure or content.
-						<br /><br />
-						&rarr; In simpler terms, CSS is what makes a website look good and easy to read by formatting text,
-						images, and other visual elements on a webpage.
-					</p>
-				</div>
-			</section>
-			<section class="topic-card" id="card-2">
-				<h1>Responsive Grid</h1>
-				<main class="grid-container">
-					<header>Header</header>
-					<aside>Ads</aside>
-					<article>
-						<p>
-							CSS has the benefit of being able to resize elements based on the size of elements. This makes is
-							easier for developers to make their websites more readable for mobile users of all screen sizes.
-							<br /><br />
-							It can be a bit confusing at first to get yuor head around <em>display:flex;</em> and <em>display:grid</em>. But once you do, your designs will be far more standardised 
-						</p>
-					</article>
-					<nav>
-						<a href="">Home</a>
-						<a href="">Contact Us</a>
-						<a href="">Sign Up</a>
-						<a href="">Sign in</a>
-						<a href="">About Us</a>
-					</nav>
-					<footer>Footer</footer>
-				</main>
-			</section>
-			<section class="topic-card" id="card-3"><h1>Hi3</h1></section>
-		</div>
-
-		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-		<script>
-			AOS.init();
-		</script>
+		<nav id="desktop-nav">
+			<a href="#" class="nav-link">Home</a>
+			<a href="test.html" class="nav-link">HTML</a>
+			<a href="#" class="nav-link">CSS</a>
+			<a href="#" class="nav-link">JavaScript</a>
+			<a href="#" class="nav-link">Test</a>
+		</nav>
+		<main class="wrapper">
+			<div class="page" id="card-1">
+				<img src="/images/BB.png" alt="Icon" id="logo-white" />
+				<img src="/images/florian-olivo-4hbJ-eymZ1o-unsplash.png" alt="Coding Screen" id="cover-image" />
+			</div>
+			<div class="page" id="card-2">
+				<h1 id="card-2-heading">Why learn to Code?</h1>
+				<p>More and more jobs</p>
+				<img src="/images/blue to Pink-wave.svg" alt="waves pink and blue" />
+			</div>
+			<div class="loader"></div>
+			<script src="/JS/loader.js"></script>
+		</main>
 	</body>
 </html>
