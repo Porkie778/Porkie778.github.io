@@ -29,7 +29,7 @@ function navDisplay() {
 		mobile.style.display = "none";
 	}
 	else {
-		
+		window.alert("Hello");
 	}
 }
 
