@@ -46,6 +46,7 @@ html {
 }
 
 #openBtn {
+	display: none;
 	cursor: pointer;
 	padding-right: 1.6rem;
 	padding-top: 1.6rem;
@@ -71,10 +72,9 @@ html {
 
 /* Desktop Navigation Bar */
 .desktop-nav {
-	display: none;
+	display: flex;
 	z-index: 1;
 	background: linear-gradient(180deg, hsl(0, 0%, 0%) 0%, hsla(0, 0%, 0%, 0) 100%);
-	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
 	position: absolute;
@@ -84,7 +84,7 @@ html {
 }
 
 .desktop-nav > .nav-link {
-	display: none;
+	float: right;
 	font-family: 'Roboto';
 	text-decoration: none;
 	font-size: 2rem;
@@ -92,4 +92,24 @@ html {
 	padding: 14px;
 	width: 100%;
 	text-align: center;
+}
+
+@media (width < 700px) {
+	#openBtn {
+		display: block;
+	}
+	.desktop-nav {
+		display: none;
+	}
+}
+
+@media (width > 1000px) {
+	.desktop-nav {
+		display: inline;
+		float: left;
+	}
+	.desktop-nav > .nav-link {
+		float: left;
+		width: 10%;
+	}
 }
