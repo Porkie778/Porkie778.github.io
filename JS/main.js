@@ -1,6 +1,3 @@
-import './jquery';
-
-
 window.addEventListener('load', () => {
 	const loader = document.querySelector('.loader');
 	loader.classList.add('loader-hidden');
@@ -10,9 +7,7 @@ window.addEventListener('load', () => {
 	});
 });
 
-$(function(){
-	$('#nav-placeholder').load("./nav.html");
-});
+
 
 // Open navigation menu sidebar
 function openNav() {
