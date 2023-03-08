@@ -11,23 +11,7 @@
 		<title>Home | Benjamin Bruce</title>
 	</head>
 	<body>
-		<!-- Mobile navigation bar -->
-		<nav id="mobile-nav" class="mobile-nav">
-			<a href="javascript:void()" class="closebtn" onclick="closeNav()">&times;</a>
-			<a href="#" class="nav-link">Home</a>
-			<a href="#" class="nav-link">HTML</a>
-			<a href="#" class="nav-link">CSS</a>
-			<a href="Porkie778.github.io/moon" class="nav-link">Moon Simulation</a>
-			<a href="#" class="nav-link">Test</a>
-		</nav>
-		<span id="openBtn" onclick="openNav()"><i class="fa-sharp fa-solid fa-bars"></i></span>
-		<nav class="desktop-nav">
-			<a href="#" class="nav-link">Home</a>
-			<a href="./pages/test/" class="nav-link">HTML</a>
-			<a href="#" class="nav-link">CSS</a>
-			<a href="#" class="nav-link">JavaScript</a>
-			<a href="#" class="nav-link">Test</a>
-		</nav>
+		<div id="nav-placeholder"></div>
 		<main id="main" class="wrapper">
 			<div class="page" id="card-1">
 				<img src="/images/logo-bb.svg" alt="Icon" id="logo-white" />
@@ -55,6 +39,12 @@
 				<img id="humaans-1" src="/images/humaans.svg" alt="" />
 			</div>
 			<div class="loader"></div>
+			<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+			<script>
+				$(function(){
+					$('nav-placeholder').load("./nav.html");
+				});
+			</script>
 			<script src="https://kit.fontawesome.com/c21b7427e3.js" crossorigin="anonymous"></script>
 			<script src="/JS/loader.js"></script>
 		</main>
