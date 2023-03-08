@@ -1,10 +1,17 @@
+import './jquery';
+
+
 window.addEventListener('load', () => {
 	const loader = document.querySelector('.loader');
 	loader.classList.add('loader-hidden');
-
+	
 	loader.addEventListener('transitionend', () => {
 		document.body.removeChild('loader');
 	});
+});
+
+$(function(){
+	$('#nav-placeholder').load("./nav.html");
 });
 
 // Open navigation menu sidebar
