@@ -44,10 +44,10 @@ function cityChoice() {
 document.getElementById('city-select').addEventListener('change', function () {
 	getWeatherData(cityChoice());
 });
-getWeatherData(cityWeather());
+getWeatherData(cityChoice());
 
 window.onload = function () {
-	getWeatherData(cityWeather());
+	getWeatherData(cityChoice());
 };
 
 // getWeatherData(2964574);
