@@ -1,5 +1,5 @@
 // API_KEY = 3b9f01fac5768ab53ac2483503953b21
-// City ID =  2964574
+var cityID =  2964574
 function getWeatherData(cityID) {
 	var key = '3b9f01fac5768ab53ac2483503953b21';
 	fetch('https://api.openweathermap.org/data/2.5/weather?id=' + cityID + '&appid=' + key)
