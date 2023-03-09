@@ -1,8 +1,8 @@
 // API_KEY = 3b9f01fac5768ab53ac2483503953b21
-var cityID =  2964574
+// cityID =  2964574
 function getWeatherData(cityID) {
 	var key = '3b9f01fac5768ab53ac2483503953b21';
-	fetch('https://api.openweathermap.org/data/2.5/weather?id=' + cityID + '&appid=' + key)
+	fetch('https://api.openweathermap.org/data/2.5/weather?id=' + getWeatherData(cityWeather()) + '&appid=' + key)
 		.then(function (resp) {
 			return resp.json();
 		})
@@ -26,19 +26,19 @@ function cityWeather() {
 	const value = city.value;
 	switch (value) {
 		case 'dublin':
-			getWeatherData(2964574);
+			return 2964574;
 			break;
 		case 'london':
-			getWeatherData(2643743);
+			return 2643743;
 			break;
 		case 'sydney':
-			getWeatherData(2147714);
+			return 2147714;
 			break;
 		case 'new-york':
-			getWeatherData(5128581);
+			return 5128581;
 			break;
 		case 'tokyo':
-			getWeatherData(1850147);
+			1850147;
 		default:
 			break;
 	}
