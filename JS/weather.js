@@ -2,7 +2,7 @@
 // cityID =  2964574
 function getWeatherData(cityID) {
 	var key = '3b9f01fac5768ab53ac2483503953b21';
-	fetch('https://api.openweathermap.org/data/2.5/weather?id=' + getWeatherData(cityWeather()) + '&appid=' + key)
+	fetch('https://api.openweathermap.org/data/2.5/weather?id=' + cityID + '&appid=' + key)
 		.then(function (resp) {
 			return resp.json();
 		})
@@ -38,7 +38,8 @@ function cityWeather() {
 			return 5128581;
 			break;
 		case 'tokyo':
-			1850147;
+			return 1850147;
+			break;
 		default:
 			break;
 	}
