@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora&family=Roboto:wght@400;700;900&display=swap');
 @import './common.css';
 
-
-
 .page {
 	position: relative;
 	height: 100vh;
@@ -68,7 +66,7 @@
 	font-size: clamp(4rem, 10vw, 6rem);
 }
 
-#card-2 p {
+.page p {
 	max-width: 100%;
 	padding: 3rem;
 	align-self: top;
@@ -76,7 +74,24 @@
 	font-family: 'Lora';
 }
 
+#card-3-heading {
+	background-color: var(--secondary-color);
+	text-align: center;
+	width: 100%;
+	color: var(--white);
+	font-family: 'Roboto';
+	font-size: 6rem;
+	padding: 3rem;
+}
 
+#card-3 img {
+	z-index: -1;
+	height: 300px;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	object-fit: cover;
+}
 
 @media screen and (width < 850px) {
 	#card-2 {
