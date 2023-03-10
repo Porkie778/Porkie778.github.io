@@ -1,15 +1,11 @@
-
-
 window.addEventListener('load', () => {
 	const loader = document.querySelector('.loader');
 	loader.classList.add('loader-hidden');
-	
+
 	loader.addEventListener('transitionend', () => {
-		document.body.removeChild('loader');
+		document.body.removeChild('.loader');
 	});
 });
-
-
 
 // Open navigation menu sidebar
 function openNav() {
