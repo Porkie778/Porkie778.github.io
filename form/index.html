@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../CSS/common.css" />
+		<link rel="stylesheet" href="../CSS/form.css" />
+		<link rel="shortcut icon" href="../images/BB.ico" type="image/x-icon" />
+		<title>Contact | Benjamin Bruce</title>
+	</head>
+	<body>
+		<main>
+			<h1 id="form-heading">Contact</h1>
+			<form action="https://formspree.io/f/xeqwzodg" method="POST">
+				<input required placeholder="Joe" type="text" name="First Name" id="fname-input" />
+				<input placeholder="Bloggs" type="text" name="Last Name" id="lname-input" />
+				<input placeholder="Your e-mail" type="email" name="Email" id="email-input" />
+				<input placeholder="085 123 4567" class="phone-input" type="text" name="Phone Number" id="phone-input" />
+				<select required name="Selected Course" id="language-select">
+					<option disabled selected value>-- Select Course --</option>
+					<option value="HTML">HTML</option>
+					<option value="CSS">CSS</option>
+					<option value="JavaScript">JavaScript</option>
+					<option value="Java">Java</option>
+					<option value="Python">Python</option>
+					<option value="C">C</option>
+				</select>
+				<div>
+					<button type="submit">Send</button>
+				</div>
+			</form>
+		</main>
+		<div class="loader"></div>
+		<script src="../JS/main.js"></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.0.2/cleave.min.js"
+			integrity="sha512-SvgzybymTn9KvnNGu0HxXiGoNeOi0TTK7viiG0EGn2Qbeu/NFi3JdWrJs2JHiGA1Lph+dxiDv5F9gDlcgBzjfA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"></script>
+		<script>
+			var cleave = new Cleave('.phone-input', {
+				blocks: [3, 3, 4],
+				uppercase: true,
+			});
+		</script>
+	</body>
+</html>
