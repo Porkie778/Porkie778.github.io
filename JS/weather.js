@@ -24,7 +24,7 @@ function drawWeather(d) {
 		document.getElementById('location'),
 	];
 	desc.innerHTML = d.weather[0].description;
-	desc.innerHTML = celcius + '&deg;C';
+	temp.innerHTML = celcius + '&deg;C';
 	loc.innerHTML = d.name;
 }
 
