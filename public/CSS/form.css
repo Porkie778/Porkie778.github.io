@@ -43,7 +43,8 @@ form {
 	align-items: center;
 }
 
-form > input,form>select {
+form > input,
+form > select {
 	margin-bottom: 2rem;
 	width: 90%;
 	align-self: center;
@@ -59,7 +60,7 @@ form > input,form>select {
 	-o-border-radius: 2rem;
 }
 
-form > select{
+form > select {
 	padding: 0;
 	padding-left: 2rem;
 	font-size: 3rem;
