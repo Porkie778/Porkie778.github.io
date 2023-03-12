@@ -1,4 +1,4 @@
-import $ from './jquery.js';
+import {$} from './jquery.js';
 
 $(function () {
 	$('#nav-placeholder').load('./nav.html');
