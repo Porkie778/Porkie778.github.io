@@ -1,4 +1,10 @@
+const { JSDOM } = require('jsdom');
+const { window } = new JSDOM('');
+const $ = require('jquery')(window);
 
+$(function () {
+	$('#nav-placeholder').load('/nav.html');
+});
 
 window.addEventListener('load', () => {
 	document.getElementsByClassName('loader')[0].classList.add('loader-hidden');
@@ -17,4 +23,4 @@ function openNav() {
 function closeNav() {
 	document.getElementById('mobile-nav').style.width = '0';
 	document.body.style.overflow = 'scroll';
-};
+}
