@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/src/CSS/common.css" />
+		<link rel="stylesheet" href="/src/CSS/weather.css" />
+		<link rel="shortcut icon" href="/src/images/BB.ico" type="image/x-icon" />
+		<title>Weather | Benjamin Bruce</title>
+	</head>
+	<body>
+		<a href="/" id="close-button">&times;</a>
+		<div id="selector">
+			<!-- <label for="city">City:</label> -->
+			<select name="city" id="city-select">
+				<option selected value="dublin">Dublin</option>
+				<option value="london">London</option>
+				<option value="sydney">Sydney</option>
+				<option value="new-york">New York</option>
+				<option value="tokyo">Tokyo</option>
+			</select>
+		</div>
+		<div id="weather">
+			<div id="desc"></div>
+			<h1 id="temp"></h1>
+			<div id="location"></div>
+		</div>
+		<div class="loader"></div>
+		<script src="/src/JS/main.js"></script>
+		<script src="https://kit.fontawesome.com/c21b7427e3.js" crossorigin="anonymous"></script>
+		<script
+			src="https://code.jquery.com/jquery-3.6.4.min.js"
+			integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+			crossorigin="anonymous"></script>
+		<script src="/src/JS/weather.js"></script>
+	</body>
+</html>
+
