@@ -1,8 +1,10 @@
-const { JSDOM } = require('jsdom');
-const $ = require('jquery');
+import { $, jQuery } from 'jquery';
+
+window.$ = $;
+window.jQuery = jQuery;
 
 $(function () {
-	$('#nav-placeholder').load('/nav.html');
+	$('#nav-placeholder').load('./nav.html');
 });
 
 window.addEventListener('load', () => {
