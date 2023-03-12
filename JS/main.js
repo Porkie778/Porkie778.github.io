@@ -1,9 +1,9 @@
-window.addEventListener('load', () => {
-	const loader = document.querySelector('.loader');
-	loader.classList.add('loader-hidden');
 
-	loader.addEventListener('transitionend', () => {
-		document.body.removeChild('.loader');
+
+window.addEventListener('load', () => {
+	document.getElementsByClassName('loader')[0].classList.add('loader-hidden');
+	document.getElementsByClassName('loader')[0].addEventListener('transitionend', () => {
+		document.body.removeChild('loader');
 	});
 });
 
@@ -17,4 +17,4 @@ function openNav() {
 function closeNav() {
 	document.getElementById('mobile-nav').style.width = '0';
 	document.body.style.overflow = 'scroll';
-}
+};

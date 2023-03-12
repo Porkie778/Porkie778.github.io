@@ -11,6 +11,7 @@
 		<title>Home | Benjamin Bruce</title>
 	</head>
 	<body>
+		
 		<div id="nav-placeholder"></div>
 		<main id="main" class="wrapper">
 			<div class="page" id="card-1">
@@ -40,24 +41,30 @@
 			</div>
 			<div class="page" id="card-3">
 				<h1 id="card-3-heading">HTML - HyperText Markup Language</h1>
-				<img src="./images/card-3.svg" alt="Waves" />
+				<img src="/images/card-3.svg" alt="Waves" />
 				<p>
 					HTML is the building block of the internet. It was created by Tim Berners-lee when he was developing the
 					internet in <em>1983</em>
 				</p>
 			</div>
+			<div class="loader"></div>
+			<script src="https://kit.fontawesome.com/c21b7427e3.js" crossorigin="anonymous"></script>
+			<script
+				src="https://code.jquery.com/jquery-3.6.4.min.js"
+				integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+				crossorigin="anonymous"></script>
+			<script>
+				$(function () {
+					$('#nav-placeholder').load('/html/nav.html');
+				});
+			</script>
+			<div id="loader"></div>
 		</main>
-		<div class="loader"></div>
 		<script src="https://kit.fontawesome.com/c21b7427e3.js" crossorigin="anonymous"></script>
 		<script
 			src="https://code.jquery.com/jquery-3.6.4.min.js"
 			integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
 			crossorigin="anonymous"></script>
-		<script>
-			$(function () {
-				$('#nav-placeholder').load('/html/nav.html');
-			});
-		</script>
 		<script src="/JS/main.js"></script>
 	</body>
 </html>
