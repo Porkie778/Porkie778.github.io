@@ -1,8 +1,4 @@
-import {$} from './jquery.js';
 
-$(function () {
-	$('#nav-placeholder').load('./nav.html');
-});
 
 window.addEventListener('load', () => {
 	document.getElementsByClassName('loader')[0].classList.add('loader-hidden');
