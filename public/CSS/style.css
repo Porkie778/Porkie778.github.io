@@ -114,7 +114,7 @@
 @media (max-width: 1050px) {
 	#card-2 {
 		flex-direction: column;
-		padding-bottom: 20vh;
+		padding-bottom: 40rem;
 		height: auto;
 	}
 	#card-2-heading {
