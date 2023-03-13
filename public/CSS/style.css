@@ -93,7 +93,7 @@
 	object-fit: cover;
 }
 
-@media screen and (width < 850px) {
+@media (max-width: 767.98px) {
 	#card-2 {
 		flex-direction: column;
 		padding-bottom: 20vh;
@@ -111,7 +111,7 @@
 	}
 }
 
-@media (pointer: coarse) {
+@media (max-width: 1050px) {
 	#card-2 {
 		flex-direction: column;
 		padding-bottom: 20vh;
