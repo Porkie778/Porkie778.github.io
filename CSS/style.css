@@ -7,6 +7,7 @@
 	width: 100%;
 }
 
+
 #card-1:not(#logo-white) {
 	display: flex;
 	flex-direction: column;
@@ -20,6 +21,7 @@
 	height: clamp(128px, 40%, 256px);
 	width: clamp(128px, 40%, 256px);
 	color: var(--black);
+	-webkit-filter: drop-shadow(2px 3px 4px var(--black));
 }
 
 #card-1 > #cover-image {
@@ -27,7 +29,6 @@
 	height: 100vh;
 	position: absolute;
 	object-fit: cover;
-	/* z-index: ; */
 	top: 0;
 	left: 0;
 }
