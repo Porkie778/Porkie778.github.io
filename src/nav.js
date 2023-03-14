@@ -1,5 +1,5 @@
 // Open navigation menu sidebar
-export function openNav() {
+function openNav() {
 	document.getElementById('mobile-nav').style.width = '100vw';
 	document.getElementById('openBtn').style.display = 'none';
 	document.body.style.overflow = 'hidden';
@@ -7,7 +7,7 @@ export function openNav() {
 }
 
 /* Set the width of the side navigation to 0 */
-export function closeNav() {
+function closeNav() {
 	document.getElementById('mobile-nav').style.width = '0';
 	document.body.style.overflow = 'scroll';
 	document.getElementById('openBtn').style.display = 'block';
