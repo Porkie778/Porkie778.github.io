@@ -13,5 +13,3 @@ function closeNav() {
 	document.getElementById('openBtn').style.display = 'block';
 	// document.getElementById('main').style.filter = 'unset';
 }
-
-export { openNav, closeNav };
