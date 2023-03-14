@@ -56,8 +56,7 @@ form {
 	align-items: center;
 }
 
-form > input,
-form > select {
+form > :is(input, select) {
 	margin-bottom: 2rem;
 	width: 90%;
 	align-self: center;

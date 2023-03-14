@@ -20,11 +20,3 @@ function closeNav() {
 	document.getElementById('openBtn').style.display = 'block';
 	// document.getElementById('main').style.filter = 'unset';
 }
-// Open Navigation Menu
-document.getElementById('openBtn').addEventListener('click', () => {
-	openNav();
-});
-// Close Navigation Menu
-document.getElementById('closeBtn').addEventListener('click', () => {
-	closeNav();
-});
