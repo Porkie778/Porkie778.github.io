@@ -1,5 +1,3 @@
-import '../CNAME';
-
 const m_nav: any = document.getElementById('mobile-nav');
 const openBtn: any = document.getElementById('openBtn');
 
@@ -11,7 +9,7 @@ window.addEventListener('load', () => {
 });
 
 // Open navigation menu sidebar
-export function openNav() {
+function openNav() {
 	m_nav.style.width = '100vw';
 	openBtn.style.display = 'none';
 	document.body.style.overflow = 'hidden';
@@ -19,9 +17,11 @@ export function openNav() {
 }
 
 /* Set the width of the side navigation to 0 */
-export function closeNav() {
+function closeNav() {
 	m_nav.style.width = '0';
 	document.body.style.overflow = 'scroll';
 	openBtn.style.display = 'block';
 	// document.getElementById('main').style.filter = 'unset';
 }
+
+export { closeNav, openNav };
