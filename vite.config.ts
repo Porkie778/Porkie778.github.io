@@ -15,8 +15,8 @@ export default defineConfig({
 		rollupOptions: {
 			input: {
 				main: resolve(root, 'index.html'),
-				weather: resolve(root, 'pages', 'weather', 'index.html'),
-				contact: resolve(root, 'pages', 'form', 'index.html'),
+				weather: resolve(root, 'weather', 'index.html'),
+				form: resolve(root, 'form', 'index.html'),
 			},
 		},
 	},
