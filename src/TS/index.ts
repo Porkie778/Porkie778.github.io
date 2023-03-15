@@ -1,3 +1,5 @@
+import '../CNAME';
+
 const m_nav: any = document.getElementById('mobile-nav');
 const openBtn: any = document.getElementById('openBtn');
 
