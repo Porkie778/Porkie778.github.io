@@ -1,14 +1,6 @@
 const m_nav = document.getElementById('mobile-nav');
 const openBtn = document.getElementById('openBtn');
 
-window.addEventListener('load', () => {
-	document.getElementsByClassName('loader')[0].classList.add('loader-hidden');
-	document.getElementsByClassName('loader')[0].addEventListener('transitionend', () => {
-		document.body.removeChild(document.getElementsByClassName('loader')[0]);
-	});
-});
-
-// Open navigation menu sidebar
 function openNav() {
 	m_nav.style.width = '100vw';
 	openBtn.style.display = 'none';
@@ -23,3 +15,6 @@ function closeNav() {
 	openBtn.style.display = 'block';
 	// document.getElementById('main').style.filter = 'unset';
 }
+
+document.getElementById('openBtn').addEventListener('click', openNav);
+document.getElementById('closeBtn').addEventListener('click', closeNav);
