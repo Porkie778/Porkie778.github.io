@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="../public/BB.ico" type="image/x-icon" />
+		<meta name="google-site-verification" content="X-ZNdWRWDjnc96h8qz4DkjPEw1ypc5mYWp1G06NA_wU" />
+		<link rel="stylesheet" href="./SCSS/home.scss" />
+		<title>Benjamin Bruce</title>
+	</head>
+	<body>
+		<nav id="mobile-nav" class="mobile-nav">
+			<a href="javascript:void()" id="closeBtn" onclick="closeNav()">&times;</a>
+			<a class="nav-link" href="/">Home</a>
+			<a class="nav-link" href="/weather/">Weather</a>
+			<a class="nav-link" href="/moon/">Moon</a>
+			<a class="nav-link" href="/Walking-tours/">Walking Tours</a>
+			<a class="nav-link" href="/form/">Contact</a>
+		</nav>
+		<span id="openBtn" onclick="openNav()"><i class="fa-sharp fa-solid fa-bars"></i></span>
+		<nav id="desktop-nav" class="desktop-nav">
+			<a class="nav-link" href="/">Home</a>
+			<a class="nav-link" href="/weather/">Weather</a>
+			<a class="nav-link" href="/moon/">Moon</a>
+			<a class="nav-link" href="/Walking-tours/">Walking Tours</a>
+			<a class="nav-link" href="/form/">Contact</a>
+		</nav>
+
+		<main id="main" class="wrapper">
+			<div class="page" id="card-1">
+				<img src="../public/images/logo-bb.svg" alt="Icon" id="logo-white" />
+				<img src="../public/images/florian-olivo-4hbJ-eymZ1o-unsplash.png" alt="Coding Screen" id="cover-image" />
+			</div>
+			<div class="page" id="card-2">
+				<div class="card-column">
+					<h1 id="card-2-heading">Why learn to Code?</h1>
+					<p>
+						Hey there. If you're thinking about whether or not to start coding, let me tell you, it's worth giving
+						it a shot. While technology might not be your cup of tea, coding offers a plethora of benefits that go
+						beyond just understanding tech. For starters, coding can improve your problem-solving skills and boost
+						your creativity. It can also help you gain a deeper understanding of how things work and develop a
+						logical thought process. Additionally, coding skills are highly sought after in many industries, so it
+						can be a valuable asset to have on your resume. And who knows, you might even discover a passion for
+						coding and tech along the way. So, give coding a chance and see where it takes you! <br /><br />
+						Programming is an industry that is constantly evolving, with new career paths appearing every day that
+						may suit you. It may seem daunting at first when you open an editor and freeze in front of all the
+						options in front of you, but remember that everyone starts somewhere. The best way to maintain
+						motivation in learing a programming language is think of something that you'd like to do, then learn how
+						to do it.
+					</p>
+					<img src="../public/images/blue to Pink-wave.svg" alt="waves pink and blue" />
+				</div>
+				<img id="humaans-1" src="../public/images/humaans.svg" alt="" />
+			</div>
+			<div class="page" id="card-3">
+				<h1 id="card-3-heading">HTML - HyperText Markup Language</h1>
+
+				<img src="../public/images/card-3.svg" alt="Waves" />
+				<p>
+					HTML stands for HyperText Markup Language, and it is the standard markup language used to create web pages.
+					In simpler terms, HTML is the language that web developers use to create the content you see on websites.
+					<br /><br />
+					HTML consists of a series of elements, or tags, that are used to structure and display content on a web
+					page. For example, a heading might be marked up with the <b>&lt;h1&gt;</b> tag, while a paragraph of text
+					might be marked up with the <b>&lt;p&gt;</b>.These tags tell your web browser how to display the content on
+					the page. They might specify the font size and color of text, the placement of images and videos, or the
+					layout of the page itself. <br /><br />
+					Because HTML is an open standard, it is used by web developers all over the world to create websites that
+					can be viewed by anyone with an internet connection. This means that no matter where you are in the world,
+					you can access the same content on the web as anyone else.
+					<br /><br />
+					While HTML is just one of many programming languages used to create web pages, it is an essential one.
+					Without HTML, web pages would not exist as we know them today. Whether you're reading this on a desktop
+					computer, tablet, or smartphone, it's all thanks to the power of HTML.
+					<br /><br />
+					In conclusion, HTML is the language that web developers use to create the content you see on websites. It is
+					made up of tags that tell your web browser how to display the content on the page, and it is used all over
+					the world to create websites that can be accessed by anyone with an internet connection.
+				</p>
+			</div>
+			<div class="loader"></div>
+			<script
+				src="https://code.jquery.com/jquery-3.6.4.min.js"
+				integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+				crossorigin="anonymous"></script>
+			<div id="loader"></div>
+		</main>
+		<script src="https://kit.fontawesome.com/c21b7427e3.js" crossorigin="anonymous"></script>
+		<script
+			src="https://code.jquery.com/jquery-3.6.4.min.js"
+			integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+			crossorigin="anonymous"></script>
+		<script defer>
+			$(function () {
+				$('#nav-placeholder').load('./nav.html');
+			});
+		</script>
+		<script type="module" src="./TS/main.js"></script>
+	</body>
+</html>
+
