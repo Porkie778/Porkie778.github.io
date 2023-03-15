@@ -4,20 +4,35 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="shortcut icon" href="./BB.ico" type="image/x-icon" />
-		
-		
+		<link rel="shortcut icon" href="/assets/BB-1e329615.ico" type="image/x-icon" />
 		<meta name="google-site-verification" content="X-ZNdWRWDjnc96h8qz4DkjPEw1ypc5mYWp1G06NA_wU" />
+		
 		<title>Benjamin Bruce</title>
-		<script type="module" crossorigin src="/assets/index-07eae36c.js"></script>
+		<script type="module" crossorigin src="/assets/main-296c4f27.js"></script>
 		<link rel="stylesheet" href="/assets/index-8320d62d.css">
 	</head>
 	<body>
-		<div id="nav-placeholder"></div>
+		<nav id="mobile-nav" class="mobile-nav">
+			<a href="javascript:void()" id="closeBtn" onclick="closeNav()">&times;</a>
+			<a class="nav-link" href="/">Home</a>
+			<a class="nav-link" href="/weather/">Weather</a>
+			<a class="nav-link" href="/moon/">Moon</a>
+			<a class="nav-link" href="/Walking-tours/">Walking Tours</a>
+			<a class="nav-link" href="/form/">Contact</a>
+		</nav>
+		<span id="openBtn" onclick="openNav()"><i class="fa-sharp fa-solid fa-bars"></i></span>
+		<nav id="desktop-nav" class="desktop-nav">
+			<a class="nav-link" href="/">Home</a>
+			<a class="nav-link" href="/weather/">Weather</a>
+			<a class="nav-link" href="/moon/">Moon</a>
+			<a class="nav-link" href="/Walking-tours/">Walking Tours</a>
+			<a class="nav-link" href="/form/">Contact</a>
+		</nav>
+
 		<main id="main" class="wrapper">
 			<div class="page" id="card-1">
-				<img src="/images/logo-bb.svg" alt="Icon" id="logo-white" />
-				<img src="/images/florian-olivo-4hbJ-eymZ1o-unsplash.png" alt="Coding Screen" id="cover-image" />
+				<img src="/assets/logo-bb-23f3b9a4.svg" alt="Icon" id="logo-white" />
+				<img src="/assets/florian-olivo-4hbJ-eymZ1o-unsplash-f927ab47.png" alt="Coding Screen" id="cover-image" />
 			</div>
 			<div class="page" id="card-2">
 				<div class="card-column">
@@ -36,13 +51,14 @@
 						motivation in learing a programming language is think of something that you'd like to do, then learn how
 						to do it.
 					</p>
-					<img src="/images/blue to Pink-wave.svg" alt="waves pink and blue" />
+					<img src="/assets/blue to Pink-wave-50f4d791.svg" alt="waves pink and blue" />
 				</div>
-				<img id="humaans-1" src="/images/humaans.svg" alt="" />
+				<img id="humaans-1" src="/assets/humaans-a8414874.svg" alt="" />
 			</div>
 			<div class="page" id="card-3">
 				<h1 id="card-3-heading">HTML - HyperText Markup Language</h1>
-				<img src="/images/card-3.svg" alt="Waves" />
+
+				<img src="/assets/card-3-ae9ba3eb.svg" alt="Waves" />
 				<p>
 					HTML stands for HyperText Markup Language, and it is the standard markup language used to create web pages.
 					In simpler terms, HTML is the language that web developers use to create the content you see on websites.
@@ -77,11 +93,12 @@
 			src="https://code.jquery.com/jquery-3.6.4.min.js"
 			integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
 			crossorigin="anonymous"></script>
-		<script>
+		<script defer>
 			$(function () {
-				$('#nav-placeholder').load('/nav.html');
+				$('#nav-placeholder').load('./nav.html');
 			});
 		</script>
 		
 	</body>
 </html>
+
