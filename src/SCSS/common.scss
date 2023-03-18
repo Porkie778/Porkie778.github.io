@@ -1,28 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora&family=Roboto:wght@400;700;900&display=swap');
 /* Boiler Plate Code */
-$white: hsl(0, 0%, 100%);
-$black: hsl(0, 0%, 0%);
+$alt-font-color: hsl(0, 0%, 100%);
+$main-font-color: hsl(0, 0%, 0%);
 $main-color: hsl(329, 70%, 43%);
 $secondary-color: hsl(230, 79%, 53%);
 
-html {
-	scroll-behavior: smooth;
+:root {
 	font-size: 62.5%;
-	&::-webkit-scrollbar {
-		display: none;
-	}
 }
 
 * {
-	color: $black;
+	font-family: 'system-ui', sans-serif;
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
 }
 
+html {
+	scroll-behavior: smooth;
+	// &::-webkit-scrollbar {
+	// 	display: none;
+	// }
+}
+
 /*  Mobile Navigation bar */
 .mobile-nav {
-	color: $white;
+	color: $alt-font-color;
 	text-align: center;
 	height: 100dvh;
 	width: 0;
@@ -44,7 +47,7 @@ html {
 	-ms-transition: 0.2s;
 	-o-transition: 0.2s;
 	.nav-link {
-		color: $white;
+		color: $alt-font-color;
 		overflow: hidden;
 		white-space: nowrap;
 		text-decoration: none;
@@ -73,7 +76,7 @@ html {
 		-ms-transition: 0.2s ease-in-out;
 		-o-transition: 0.2s ease-in-out;
 		&:hover {
-			color: $white;
+			color: $alt-font-color;
 		}
 	}
 	a:not(a#closeBtn) {
@@ -84,7 +87,7 @@ html {
 		padding: 8px 8px;
 
 		&:hover {
-			color: $white;
+			color: $alt-font-color;
 		}
 	}
 }
@@ -98,9 +101,9 @@ html {
 	position: fixed;
 	top: 0;
 	right: 0;
-	color: $white;
+	color: $alt-font-color;
 	i {
-		color: $white;
+		color: $alt-font-color;
 		display: none;
 		text-shadow: 2px 3px 4px hsla(0, 0%, 0%, 0.416);
 		font-size: 3rem;
@@ -122,13 +125,13 @@ html {
 	-ms-transition: 0.2s ease-in-out;
 	-o-transition: 0.2s ease-in-out;
 	&:hover {
-		color: $white;
+		color: $alt-font-color;
 	}
 }
 
 /* Desktop Navigation Bar */
 .desktop-nav {
-	color: $white;
+	color: $alt-font-color;
 	display: block;
 	float: left;
 	z-index: 1;
@@ -143,7 +146,7 @@ html {
 		font-family: 'Roboto';
 		text-decoration: none;
 		font-size: 2rem;
-		color: $white;
+		color: $alt-font-color;
 		padding: 14px;
 		text-align: center;
 		float: left;

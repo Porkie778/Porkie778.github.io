@@ -21,7 +21,7 @@ body {
 	font-size: 6rem;
 	z-index: 3;
 	text-decoration: none;
-	color: $white;
+	color: $alt-font-color;
 	cursor: pointer;
 }
 
@@ -43,7 +43,7 @@ main {
 }
 
 #form-heading {
-	color: var(--white);
+	color: $alt-font-color;
 	font-size: 6rem;
 	font-family: 'Roboto';
 	text-transform: uppercase;
@@ -90,7 +90,7 @@ form > select {
 	text-transform: uppercase;
 	padding: 1rem;
 	font-size: 2.4rem;
-	color: var(--white);
+	color: $alt-font-color;
 	width: 100%;
 	background-color: transparent;
 	border: 0.5rem $main-color solid;
@@ -108,8 +108,8 @@ form > select {
 }
 
 .buttons:hover {
-	background-color: white;
-	color: black;
+	background-color: $alt-font-color;
+	color: $main-font-color;
 }
 .buttons:active {
 	text-decoration: underline;
