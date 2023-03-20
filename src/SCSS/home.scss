@@ -1,40 +1,63 @@
 @import './common.scss';
 @import url('https://fonts.googleapis.com/css2?family=Lora&family=Roboto:wght@400;700;900&display=swap');
 
+$body-color: white;
 body {
-	background-color: hsl(0, 0%, 8%);
+	background-color: $body-color;
+}
+
+img {
+	width: 100%;
+
+	display: block;
 }
 
 .hero {
-	height: 100dvh;
+	position: relative;
+	height: 105dvh;
 	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	background-image: url(../../public/images/christopher-gower-m_HRfLhgABo-unsplash.jpg);
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-image: url(../../public/images/christopher-gower-m_HRfLhgABo-unsplash.jpg);
+		filter: brightness(70%);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
+	}
+	& > * {
+		position: relative;
+	}
 	&-header {
 		font-size: clamp(4.5rem, 6vw, 8rem);
 		padding: 1em 2em;
 		width: 100%;
 		margin-inline: auto;
 		min-width: 90%;
+		line-height: 0.9;
 		text-align: center;
 		color: $alt-font-color;
 		text-shadow: 3px 4px 5px hsla(0, 0%, 0%, 0.732);
 	}
 	&-call {
+		margin-inline: auto;
+		text-align: center;
 		color: $alt-font-color;
 		font-size: clamp(2em, 1.5vw, 4em);
-		background-color: hsla(0, 0%, 0%, 0.453);
-		padding: 0.5em;
 		line-height: 1.2em;
+		text-shadow: 3px 4px 5px hsla(0, 0%, 0%, 0.732);
+		padding: 0.5em;
 		border-radius: 1em;
-
-		backdrop-filter: blur(2px);
 
 		&::before {
 			content: open-quote;
@@ -42,6 +65,92 @@ body {
 		&::after {
 			content: close-quote;
 		}
+	}
+}
+
+.intro-wrapper {
+	display: grid;
+	grid-template-columns: 25% 50% 25%;
+	grid-template-areas:
+		'blank content sidebar'
+		'blank content sidebar'
+		'blank content sidebar';
+	.intro {
+		grid-area: content;
+		margin-block: 2rem;
+		position: relative;
+		font-size: 62.5%;
+		color: $main-font-color;
+		font-size: 1.6em;
+		margin-inline: auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		&-heading {
+			font-family: 'Roboto', sans-serif;
+			font-size: clamp(2.5rem, 5vw, 5rem);
+			margin-block: 1em;
+			// color: red;
+		}
+		&-logo-container {
+			background-color: white;
+			padding: 1em;
+			border-radius: 0.5em;
+			max-width: 70%;
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			margin-bottom: 2em;
+			gap: 2rem;
+			& > img {
+				height: 100px;
+			}
+		}
+		&-para {
+			font-size: clamp(1.7rem, 2.5vw, 2rem);
+			line-height: 1.6;
+			letter-spacing: 1.1;
+			max-width: 75ch;
+			margin-inline: 1rem;
+		}
+	}
+	& > .sidebar {
+		overflow: hidden;
+		border: 0.2em solid hsl(0, 0%, 13%);
+		margin-inline: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		grid-area: sidebar;
+		// padding-inline: 2em;
+		border-top-left-radius: 1em;
+		border-top-right-radius: 1em;
+		h1 {
+			width: 100%;
+			padding: 0.4em 2em;
+			// border-top-left-radius: 1em;
+			// border-top-right-radius: 1em;
+			// width: 100%;
+			text-align: center;
+			background-color: red;
+		}
+		.sidebar-tools {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			& > .source-links {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 1200px) {
+	.intro-wrapper {
+		grid-template-areas: 'blank blank blank' 'content content content' 'sidebar sidebar sidebar';
+		grid-template-rows: repeat(3, auto);
 	}
 }
 

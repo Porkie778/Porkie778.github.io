@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora&family=Roboto:wght@400;700;900&display=swap');
 /* Boiler Plate Code */
-$alt-font-color: hsl(0, 0%, 100%);
+// $alt-font-color: hsl(0, 0%, 100%);
+$alt-font-color: hsl(0, 0%, 98%);
 $main-font-color: hsl(0, 0%, 0%);
 $main-color: hsl(329, 70%, 43%);
 $secondary-color: hsl(230, 79%, 53%);
@@ -18,9 +19,9 @@ $secondary-color: hsl(230, 79%, 53%);
 
 html {
 	scroll-behavior: smooth;
-	// &::-webkit-scrollbar {
-	// 	display: none;
-	// }
+	&::-webkit-scrollbar {
+		display: none;
+	}
 }
 
 /*  Mobile Navigation bar */
