@@ -2,13 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora&family=Roboto:wght@400;700;900&display=swap');
 
 $body-color: white;
+// $body-color: hsl(180, 3%, 7%);
+// $alt-font-color: hsl(0, 0%, 91%);
+// $main-font-color: hsl(0, 0%, 91%);
+
 body {
 	background-color: $body-color;
 }
 
 img {
 	width: 100%;
-
 	display: block;
 }
 
@@ -58,6 +61,7 @@ img {
 		text-shadow: 3px 4px 5px hsla(0, 0%, 0%, 0.732);
 		padding: 0.5em;
 		border-radius: 1em;
+		margin-bottom: 20rem;
 
 		&::before {
 			content: open-quote;
@@ -70,7 +74,7 @@ img {
 
 .intro-wrapper {
 	display: grid;
-	grid-template-columns: 25% 50% 25%;
+	grid-template-columns: 1fr 2fr 1fr;
 	grid-template-areas:
 		'blank content sidebar'
 		'blank content sidebar'
@@ -115,35 +119,72 @@ img {
 		}
 	}
 	& > .sidebar {
-		overflow: hidden;
-		border: 0.2em solid hsl(0, 0%, 13%);
-		margin-inline: auto;
+		font-size: 1.3rem;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		overflow: hidden;
+		border: 0.2em solid hsl(0, 0%, 13%);
+		margin-inline: auto;
 		grid-area: sidebar;
-		// padding-inline: 2em;
 		border-top-left-radius: 1em;
 		border-top-right-radius: 1em;
-		h1 {
+		& h1 {
 			width: 100%;
 			padding: 0.4em 2em;
 			// border-top-left-radius: 1em;
 			// border-top-right-radius: 1em;
 			// width: 100%;
 			text-align: center;
-			background-color: red;
+			background: red;
 		}
+
 		.sidebar-tools {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-			& > .source-links {
-				display: flex;
-				flex-direction: column;
-				align-items: center;
+		}
+		.sidebar-resources {
+			color: blue;
+		}
+		.source-links {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			& > a {
+				font-size: 1.2em;
+				color: $main-font-color;
+				text-align: center;
+				width: 100%;
+				padding-block: 0.5em;
 			}
 		}
+	}
+}
+
+.title-div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 2em;
+	margin-block: 3em;
+	position: relative;
+	width: 100%;
+	height: 5em;
+
+	.title-wrapper {
+		position: relative;
+		text-align: center;
+		color: $alt-font-color;
+	}
+	&::after {
+		z-index: -1;
+		isolation: isolate;
+		content: '';
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(90deg, rgba(241, 101, 41, 1) 0%, rgba(228, 77, 38, 1) 100%);
+		transform: skewY(-5deg);
 	}
 }
 
